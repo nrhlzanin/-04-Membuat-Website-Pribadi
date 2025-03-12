@@ -80,9 +80,80 @@ Aplikasi akan terbuka di browser pada alamat http://localhost:3000.
 
 4. Buka browser dan akses: 
     - http://localhost:3000/ untuk halaman "Tentang Saya". 
-    - http://localhost:3000/projects untuk halaman "Proyek". 
-    - http://localhost:3000/essays untuk halaman "Esai".
 
 > ![Screenshot](assets-report/2/04.png)
+
+    - http://localhost:3000/projects untuk halaman "Proyek". 
+
 > ![Screenshot](assets-report/2/05.png)
+
+    - http://localhost:3000/essays untuk halaman "Esai".
+
 > ![Screenshot](assets-report/2/06.png)
+
+### Membuat Layout dan Navigasi 
+1. Buat direktori src/components jika belum ada. 
+2. Buat file src/components/Layout.tsx: 
+
+> ![Screenshot](assets-report/3/01.png)
+
+3. Buat file src/components/Navbar.tsx
+
+```bash
+'use client';
+import { usePathname } from 'next/navigation';
+import Link from 'next/link';
+
+type NavItemProps = {
+  title: string;
+  url: string;
+  isSelected: boolean;
+};
+
+function NavItem({ title, url, isSelected }: NavItemProps) {
+  return (
+    <li>
+      <a
+        className={`block px-3 py-2 transition hover:text-teal-500 ${
+          isSelected ? "text-teal-500" : ""
+        }`}
+        href={url}
+      >
+        {title}
+      </a>
+    </li>
+  );
+}
+
+export default function Navbar() {
+  const pathname = usePathname();
+
+  return (
+    <div className="flex justify-center mx-auto max-w-7xl h-16 pt-6">
+      <nav>
+        <ul className="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur">
+          <NavItem title="Tentang Saya" url="/" isSelected={pathname === '/'} />
+          <NavItem title="Proyek" url="/projects" isSelected={pathname === '/projects'} />
+          <NavItem title="Esai" url="/essays" isSelected={pathname === '/essays'} />
+        </ul>
+      </nav>
+    </div>
+  );
+}
+```
+
+4. Buat file src/components/Footer.tsx 
+
+> ![Screenshot](assets-report/3/02.png)
+ 
+5. Update file app/layout.tsx untuk menggunakan layout: 
+
+> ![Screenshot](assets-report/3/03.png)
+
+6. Update setiap halaman menambahkan metadata dengan generateMetadata: 
+
+> ![Screenshot](assets-report/3/04.png)
+
+Lakukan hal yang sama untuk halaman projects/page.tsx dan essays/page.tsx.
+
+> ![Screenshot](assets-report/3/05.png)
