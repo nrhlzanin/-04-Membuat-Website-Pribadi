@@ -66,3 +66,23 @@ Aplikasi akan terbuka di browser pada alamat http://localhost:3000.
 > ![Screenshot](assets-report/1/07.png)
 
 ### Membuat Halaman Website 
+1. Buat file app/page.tsx sebagai halaman "Tentang Saya": 
+
+> ![Screenshot](assets-report/2/01.png)
+
+2. Buat file app/projects/page.tsx sebagai halaman "Proyek": 
+
+> ![Screenshot](assets-report/2/02.png)
+
+3. Buat file app/essays/page.tsx sebagai halaman "Esai": 
+
+> ![Screenshot](assets-report/2/03.png)
+
+4. Buka browser dan akses: 
+    - http://localhost:3000/ untuk halaman "Tentang Saya". 
+    - http://localhost:3000/projects untuk halaman "Proyek". 
+    - http://localhost:3000/essays untuk halaman "Esai".
+
+> ![Screenshot](assets-report/2/04.png)
+> ![Screenshot](assets-report/2/05.png)
+> ![Screenshot](assets-report/2/06.png)
