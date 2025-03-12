@@ -157,3 +157,34 @@ export default function Navbar() {
 Lakukan hal yang sama untuk halaman projects/page.tsx dan essays/page.tsx.
 
 > ![Screenshot](assets-report/3/05.png)
+
+### Membuat Halaman Proyek dengan Grid Responsif 
+1. Buat folder di public/images. Kemudian tambahkan dua image, lalu rename dengan nama 
+project1.png dan project2.png 
+2. Modifikasi file app/projects/page.tsx: 
+Tambahkan import next/image dan beberapa image yang telah ditambahkan sebelumnya 
+
+> ![Screenshot](assets-report/4/01.png)
+
+Buat card project item sebagai berikut: 
+
+> ![Screenshot](assets-report/4/02.png)
+
+Modifikasi komponen project sebagai berikut: 
+
+> ![Screenshot](assets-report/4/03.png)
+
+3. Simpan file dan buka http://localhost:3000/projects di browser. Anda akan melihat daftar proyek 
+dalam grid yang responsif. 
+
+> ![Screenshot](assets-report/4/04.png)
+
+## Tugas 
+Eksplorasi Tailwindcss, kemudian. 
+1. Modifikasi halaman "Esai" dengan Grid daftar artikel yang telah ditulis. 
+
+> ![Screenshot](assets-report/Tugas/01.png)
+
+2. Modifikasi halaman “Tentang Saya” Buat tampilan yang menarik 
+
+> ![Screenshot](assets-report/Tugas/02.png)
